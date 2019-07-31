@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title> Mentor Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .form {
+  background: #ff3256;
+  padding: 40px;
+  width: 600px;
+  height: 600px;
+  margin: 40px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+h1 {
+  text-align: center;
+  color: #40E0D0;
+  font-weight: 800;
+  margin: 0 0 40px;
+}
+
+label {
+  left: 13px;
+  color: #40E0D0;
+  font-size: 18px;
+}
+input, textarea {
+  font-size: 22px;
+  display: block;
+  width: 80%;
+  height: 80%;
+  box-align:center;
+  padding: 15px 20px;
+  border: 1px solid #a0b3b0;
+  border-radius: 25px;
+  transition: border-color .25s ease, box-shadow .25s ease;
+  }
+  .button-block {
+  text-align: center;
+  font-size: 22px;
+  color: black;
+  margin-left: 150px;
+  width: 20rem;
+  height: 4rem;
+  border-radius: 2rem;
+  background-color: #40E0D0;
+}
+</style>
+
+  
+</head>
+
+<body>
+
+  <div class="form">
+      
+      
+     
+          <h1>Educate</h1>
+          
+          <form action="/" method="post">
+          
+         
+            <div class="field-wrap">
+              <label>
+                UserId<span class="req">*</span>
+              </label><br><br>
+              <input type="text" name="username" required autocomplete="off" placeholder="username"/>
+            </div><br><br>
+       
+
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label><br><br>
+            <input type="password" name="password" required autocomplete="off"  placeholder="password"/>
+          </div><br><br>
+          <p class="register"><a href="#">New Mentor? Register Here</a></p>
+          
+          
+          </form>
+
+       <br><br>
+        <button type="submit" class="button button-block" name="loginuser" value="login_user" />Log In</button>
+    </div> 
+</body>
+</html>

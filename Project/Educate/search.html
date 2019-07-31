@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Search</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+h1 {
+  text-align: center;
+  color: #40E0D0;
+  font-weight: 800;
+  font-size:35px;
+  margin: 0 0 40px;
+}
+
+.form {
+  background: #ff3256;
+  padding: 40px;
+  width: 600px;
+  height: 600px;
+  margin: 40px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+label {
+  color: #40E0D0;
+  font-size: 23px;
+}
+select{
+  font-size: 22px;
+  width: 20rem;
+  height:3rem ;
+  box-align:center;
+  border: 1px solid #a0b3b0;
+  border-radius: 25px;
+  margin-left:10rem;
+  color:gray;
+  }
+  .button-block {
+  text-align: center;
+  font-size: 22px;
+  color: black;
+  margin-left: 150px;
+  width: 20rem;
+  height: 4rem;
+  border-radius: 2rem;
+  background-color: #40E0D0;
+}
+</style>
+</head>
+<body>
+		<div class="form">
+		
+			<h1>Search</h1>
+							
+			<label>Select Time:</label>
+			<br><br><br>
+				<select>
+					<option>10am-12pm</option>
+					<option>12pm-2pm</option>
+					<option>5:30pm-7:30pm</option>
+					<option>7:30pm-9:30pm</option>
+					</select> <br><br><br>
+				<label >Select Technology:</label> 
+				<br><br><br>
+				<select>
+					<option>English</option>
+					<option>Mathematics</option>
+					<option>Science</option>
+					<option>Vernacular</option>
+				</select> <br ><br><br><br><br><br>
+				<button type="submit" class="button button-block" value="search" />Search</button>
+		</div>
+				
+
+
+</body>
+</html>
