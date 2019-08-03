@@ -5,16 +5,16 @@
   <meta charset="UTF-8">
   <title> Mentor Login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <style>
   body{
 background-image: url("bg.jpg");
 background-size: cover;
 background-position: center;
 }
-  .form {
+  .container {
    background-color: rgba(255,50,86,0.72);
   padding: 40px;
   width: 600px;
@@ -24,7 +24,7 @@ background-position: center;
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
 }
 
-h1 {
+h1,a{
   text-align: center;
   color: #40E0D0;
   font-weight: 800;
@@ -63,14 +63,18 @@ input, textarea {
 </head>
 
 <body>
+ <div class="container">
+  <h1>Educate</h1>
+  <ul class="nav nav-tabs nav-justified">
+    <li class="active"><a data-toggle="tab" href="#mentor">MENTOR</a></li>
+    <li><a data-toggle="tab" href="#user">USER</a></li>
+    <li><a data-toggle="tab" href="#admin">ADMIN</a></li>
+   
+  </ul>
 
-  <div class="form">
-      
-      
-     
-          <h1>Educate</h1>
-          
-          <form action="/" method="post">
+  <div class="tab-content">
+    <div id="mentor" class="tab-pane fade in active">
+      <form action="/" method="post">
           
          
             <div class="field-wrap">
@@ -87,13 +91,69 @@ input, textarea {
             </label><br><br>
             <input type="password" name="password" required autocomplete="off"  placeholder="password"/>
           </div><br><br>
-          <p class="register"><a href="#">New Mentor? Register Here</a></p>
           
           
-          </form>
+          
+          
+
+       
+        <button type="submit" class="button button-block" name="loginuser" value="login_user" />Log In</button><br><br>
+		<p class="register"><a href="#">New Mentor? Register Here</a></p>
+    </form>
+	</div>
+    <div id="user" class="tab-pane fade">
+      <form action="/" method="post">
+          
+         
+            <div class="field-wrap">
+              <label>
+                UserId<span class="req">*</span>
+              </label><br><br>
+              <input type="text" name="username" required autocomplete="off" placeholder="username"/>
+            </div><br><br>
+       
+
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label><br><br>
+            <input type="password" name="password" required autocomplete="off"  placeholder="password"/>
+          </div><br><br>
+        <button type="submit" class="button button-block" name="loginuser" value="login_user" />Log In</button><br><br>
+		<p class="register"><a href="#">New User? Register Here</a></p>
+		<p><a href="search.html">Search for courses and timings</a></p>
+	</form>
+	</div>
+    <div id="admin" class="tab-pane fade">
+      <form action="/" method="post">
+          
+         
+            <div class="field-wrap">
+              <label>
+                UserId<span class="req">*</span>
+              </label><br><br>
+              <input type="text" name="username" required autocomplete="off" placeholder="username"/>
+            </div><br><br>
+       
+
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label><br><br>
+            <input type="password" name="password" required autocomplete="off"  placeholder="password"/>
+          </div><br><br>
+          
 
        <br><br>
         <button type="submit" class="button button-block" name="loginuser" value="login_user" />Log In</button>
-    </div> 
+	</form>
+	</div>
+    
+  </div>
+</div>
+		  
+		  
+		  
+		 
 </body>
 </html>
