@@ -1,0 +1,185 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+<!-- Required meta tags -->
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+
+
+<title>SignUp</title>
+
+<style>
+body{
+background-image: url("bg.jpg");
+background-size: cover;
+background-position: center;
+}
+form {
+   background-color: rgba(255,50,86,0.72);
+  padding: 40px;
+  width: 100rem;
+  height: 100rem;
+  margin: 40px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+  text-align:left
+}
+
+h1 {
+  text-align: center;
+  color: #40E0D0;
+  font-weight: 800;
+  margin: 0 0 40px;
+}
+
+label {
+  margin-left:2rem;
+  color: #40E0D0;
+  font-size: 18px;
+}
+
+  .button-block {
+  text-align: center;
+  font-size: 22px;
+  color: black;
+  margin-left:40rem;
+  width: 20rem;
+  height: 4rem;
+  border-radius: 2rem;
+  background-color: #40E0D0;
+}
+</style>
+<script language="javascript">
+var rowNo = 0;
+        function addRow(tableID) {
+ 
+            var table = document.getElementById(tableID);
+ rowNo++;
+            var rowCount = table.rows.length;
+            var row = table.insertRow(rowCount);
+ 
+            var cell1 = row.insertCell(0);
+            var element1 = document.createElement("input");
+            element1.type = "checkbox";
+            element1.name="chkbox[]";
+	    element1.style.width="80px";
+            cell1.appendChild(element1);	
+ 
+            var cell2 = row.insertCell(1);
+            cell2.innerHTML =  rowNo;
+			cell2.style.textAlign="center";
+ 
+           var cell3 = row.insertCell(2);
+
+	 
+            var element2 = document.createElement("input");
+            element2.type = "text";
+            element2.name = "txtbox[]";
+		element2.style.color="#000000";
+		
+            cell3.appendChild(element2);
+	
+ 
+ 
+var cell4 = row.insertCell(3);
+            cell4.innerHTML =  'Course name';
+        }
+ 
+        function deleteRow(tableID) {
+            try {
+            var table = document.getElementById(tableID);
+            var rowCount = table.rows.length;
+ 
+            for(var i=0; i<rowCount; i++) {
+                var row = table.rows[i];
+                var chkbox = row.cells[0].childNodes[0];
+                if(null != chkbox && true == chkbox.checked) {
+                    table.deleteRow(i);
+                    rowCount--;
+                    i--;
+                }
+ 
+ 
+            }
+            }catch(e) {
+                alert(e);
+            }
+        }
+ 
+    </script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="col-sm-2"></div>
+		<div class="row">
+			<div class="col-sm-8">
+			<form class="form-signin">
+				<div class="card card-signin my-5">
+					<div class="card-body">
+						<h1 class="card-title text-center">Mentor's Registration</h1><hr>
+						
+							<div class="form-label-group"></div>
+								<input type="text" name="fname" id="AsID" class="form-control input-lg" placeholder="First Name" tabindex="1" required><br />
+								
+								<input type="text" name="lname" id="AsID" class="form-control input-lg" placeholder="Last Name" tabindex="1" required><br /> 
+								
+								<input type="text" name="lname" id="AsID" class="form-control input-lg" placeholder="Country" tabindex="1" required><br /> 
+								
+								<input type="text" name="age" id="AsID" class="form-control input-lg" placeholder="Age" tabindex="1" required><br /> 
+								
+								<font size="4">Gender</font>&nbsp;&nbsp; 
+								<input type="radio" name="gender" value="male"> Male &nbsp;&nbsp;
+								<input type="radio" name="gender" value="female"> Female&nbsp;&nbsp; </br> <br>
+								
+								<font size="4">Add Course Speciality</font>&nbsp;&nbsp;<br>
+								<INPUT type="button" style="background-color:#337ab7;color:#f5f5f5;font-size:17px" value="Add Row" onclick="addRow('dataTable')" />
+ 
+								<INPUT type="button" style="background-color:#337ab7;color:#f5f5f5;font-size:17px" value="Delete Row" onclick="deleteRow('dataTable')" />
+ 
+								<TABLE style="background:#C0C0C0;color:#FFFFFF;" id="dataTable" width="350px" border="1">
+									<TR>
+										<TD><INPUT type="checkbox" name="chk" style="width:80px;"/></TD>
+										<TD style="width:80px;text-align:center;"> 0 </TD>
+										<TD> <INPUT style="background:white; color:#000000" type="text" /> </TD>
+										<TD> Course name </TD>
+									</TR>
+								</TABLE>
+
+								<br>
+								<input type="text" name="ContactNumber" id="AsID" class="form-control input-lg" placeholder="Contact Number" tabindex="1" pattern="(?=.*\d).{10}" required><br /> 
+								
+								<input type="email" name="email" id="AsID" class="form-control input-lg" placeholder="email id" tabindex="1" required><br /> 
+								
+								<input type="password" name="pass" id="AsID" class="form-control input-lg" placeholder="Password" tabindex="1" required><br /> 
+								
+								<input type="confirm password" name="cpass" id="AsID" class="form-control input-lg" placeholder="Confirm Password"tabindex="1" required><br />  <br /> 
+								
+								<input type="submit" style="background-color:#40E0D0;"value="Confirmation link" class="btn btn-primary btn-block btn-lg color-b" tabindex="7">
+						</form>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-2"></div>
+	</div>
+
+	
+</body>
+
+</html>
