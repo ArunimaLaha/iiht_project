@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Admin</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+ body{
+background-image: url("bg.jpg");
+background-size: cover;
+background-position: center;
+}
+h1 {
+  text-align: center;
+  color: #40E0D0;
+  font-weight: 800;
+  margin: 0 0 40px;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border: 1px solid #dddddd;
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+ .customer {
+  border-radius: 5px;
+ background-color: rgba(255,50,86,0.72);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+  height:45rem;
+  width:80rem;
+  margin: 40px auto;
+  text-align:center;
+  }
+  .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+
+<link rel="stylesheet" href="css/search.css">
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">EDUCATE</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="AdmAfterLogin1.html">Technologies</a></li>
+      <li class="active"><a href="AdmAfterLogin3.html">Users</a></li>
+      <li><a href="AdmAfterLogin3.html">Mentors</a></li>
+      <li><a href="AdmAfterLogin4.html">Payments</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="customer">
+<h1>Users</h1>
+
+<table style="width:100%">
+  <tr>
+    <th>Name of User</th>
+    <th>Technology</th>
+    <th>Progress</th>
+	<th>Status</th>
+    <th>Action</th>
+  </tr>
+  <tr>
+    <td>Arijit Pal</td>
+    <td>java</td>
+    <td>25%</td>
+    <td>Accepted</td>
+    <td><button class="btn btn-success" type="submit">Accept</button>&nbsp;<button class="btn btn-warning" type="submit">Reject</button></td>
+  </tr>
+  <tr>
+    <td>Anand</td>
+    <td>Angular</td>
+    <td>50%</td>
+    <td>Accepted</td>
+    <td><button class="btn btn-success" type="submit">Accept</button>&nbsp;<button class="btn btn-warning" type="submit">Reject</button></td>
+  </tr>
+  <tr>
+    <td>Anoy</td>
+    <td>Python</td>
+    <td>75%</td>
+   <td>Accepted</td>
+    <td><button class="btn btn-success" type="submit">Accept</button>&nbsp;<button class="btn btn-warning" type="submit">Reject</button></td>
+  </tr>
+  
+</table>
+<br><br>
+
+</div>
+</div>
+
+</body>
+</html>
